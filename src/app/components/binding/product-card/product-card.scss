@@ -1,0 +1,12 @@
+:host {
+  display: block; /* или inline-block / flex / grid */
+  width: 100%;
+}
+
+.product-card {
+  padding: 10px;
+}
+
+img.product-logo {
+  width: 180px;
+}

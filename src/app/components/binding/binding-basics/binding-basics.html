@@ -1,0 +1,18 @@
+<h2>{{ title }}</h2>
+<p>{{ description }}</p>
+
+<img [src]="imageUrl" alt="Angular logo" class="angular-logo">
+
+<div class="actions">
+  <button [disabled]="isDisabled">Done</button>
+</div>
+
+<h3>Event binding</h3>
+<p>Clicked: {{ clickCount }}</p>
+<button (click)="increaseScore()">Increase</button>
+
+<h3>Two-way binding</h3>
+<input type="text" placeholder="Enter your name" [(ngModel)]="name">
+@if(name) {
+  <p>Hello, {{ name }}</p>
+}

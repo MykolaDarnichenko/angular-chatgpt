@@ -1,0 +1,13 @@
+<div class="product-card" appHighlight>
+  <h2>Product card</h2>
+
+  <img class="product-logo" [src]="product().imageUrl" [alt]="product().name">
+
+  <ul>
+    <li>Name: {{ product().name }}</li>
+    <li>Price: {{ product().price }}$</li>
+    <li>Available: {{ product().available ? 'Yes' : 'No' }}</li>
+  </ul>
+
+  <button [disabled]="!product().available" (click)="addToCart(product())">Add to cart</button>
+</div>

@@ -1,0 +1,14 @@
+button {
+  font-size: 24px;
+  color: silver;
+  border: none;
+  background: transparent;
+
+  &.fill {
+    color: gold;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

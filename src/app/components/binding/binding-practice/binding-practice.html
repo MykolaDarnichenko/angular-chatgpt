@@ -1,0 +1,4 @@
+<!-- <app-binding-basics /> -->
+<app-product-card [product]="product" (productAdded)="addToCart($event)" />
+
+<p>Cart items: {{ cart.length }}</p>

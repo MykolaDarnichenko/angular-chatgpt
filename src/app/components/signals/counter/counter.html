@@ -1,0 +1,8 @@
+  <h1>Counter</h1>
+  <p>Value: {{ count() }}</p>
+
+  <div class="actions">
+    <button (click)="onDecrease()" [disabled]="!canDecrease()">Decrease(-)</button>
+    <button (click)="onIncrease()" [disabled]="!canIncrease()">Increase(+)</button>
+    <button (click)="onReset()">Reset</button>
+  </div>

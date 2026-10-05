@@ -1,0 +1,9 @@
+<h2>Rating</h2>
+
+<button [class.fill]="rating() >= 1" (click)="selectRating(1)">★</button>
+<button [class.fill]="rating() >= 2" (click)="selectRating(2)">★</button>
+<button [class.fill]="rating() >= 3" (click)="selectRating(3)">★</button>
+<button [class.fill]="rating() >= 4" (click)="selectRating(4)">★</button>
+<button [class.fill]="rating() >= 5" (click)="selectRating(5)">★</button>
+
+<p>Rating: {{ rating() }}</p>

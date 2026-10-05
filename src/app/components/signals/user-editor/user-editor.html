@@ -1,0 +1,14 @@
+<div class="actions">
+  <h2>User Editor</h2>
+  <label for="name"></label>
+  <input #name name="name" type="text" placeholder="Enter new name">
+  <button (click)="changeName(name.value)" type="submit">Change name</button>
+
+  <br>
+  <label for="age"></label>
+  <input #age name="age" type="number" placeholder="Enter new age">
+  <button type="submit" (click)="changeAge(age.value)">Change age</button>
+
+  <br>
+  <button (click)="toggleStatus()">Toggle status</button>
+</div>

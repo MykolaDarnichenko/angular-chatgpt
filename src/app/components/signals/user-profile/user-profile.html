@@ -1,0 +1,43 @@
+<section>
+  <h2>User profile:</h2>
+  <ul>
+    <li>Name: {{ user().name }}</li>
+    <li>Age: {{ user().age }}</li>
+    <li>Status: {{ user().isOnline }}</li>
+  </ul>
+
+  <div class="actions">
+    <h2>User actions</h2>
+
+    <label for="name"></label>
+    <input #name name="name" type="text" placeholder="Enter new name">
+    <button (click)="changeName(name.value)" type="submit">Change name</button>
+
+    <br>
+    <label for="age"></label>
+    <input #age name="age" type="number" placeholder="Enter new age" [value]="user().age">
+    <button type="submit" (click)="changeAge(age.value)">Change age</button>
+    
+    <br>
+    <button (click)="toggleStatus()">Toggle status</button>
+  </div>
+
+  <div class="details">
+    <h2>User details</h2>
+    <p>{{ displayName() }}</p>
+    <p>Status: {{ displayStatus() }}</p>
+  </div>
+</section>
+
+<section>
+  <h2>Score</h2>
+
+  <p>Score: {{score()}}</p>
+  <p>Level: {{level()}}</p>
+
+  <div class="actions">
+    <button (click)="increaseScore()">+10</button>
+    <button (click)="decreaseScore()">-5</button>
+    <button (click)="resetScore()">Reset</button>
+  </div>
+</section>
